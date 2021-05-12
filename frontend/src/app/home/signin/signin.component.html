@@ -33,6 +33,4 @@
 
 </form>
 
-<p>Not a user?<a> Register now</a></p>
-
-<pre>{{ this.form.value | json }}</pre>
+<p>Not a user?<a [routerLink]="['signup']" routerLinkActive="router-link-active" > Register now</a></p>

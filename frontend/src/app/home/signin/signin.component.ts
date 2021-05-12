@@ -25,6 +25,7 @@ export class SignInComponent implements OnInit {
             userName: ['', Validators.required],
             password: ['', Validators.required]
         });
+        this.platformDetectorService.isPlatformBrowswe() && this.userNameInput.nativeElement.focus();
     }
 
     login() {
@@ -40,7 +41,6 @@ export class SignInComponent implements OnInit {
                     console.error(error.message);
                     this.form.reset();
                     this.platformDetectorService.isPlatformBrowswe() && this.userNameInput.nativeElement.focus();
-                    alert(error.message);
                 }
     }
 

@@ -2,7 +2,7 @@
 
 <form class="form mt-4" [formGroup]="form" (submit)="signup()">
     <div class="form-group">
-        <input formControlName="email" placeholder="E-mail" class="form-control" autofocus >
+        <input #emailInput formControlName="email" placeholder="E-mail" class="form-control" autofocus >
         <app-vmessage *ngIf="form.get('email').errors?.email"
             text="Invalid E-mail!">
         </app-vmessage>
@@ -56,5 +56,5 @@
 
     <button class="btn btn-primary btn-block">Register</button>
 
-    <p>Already a user?<a [routerLink]="['']">Sign In!</a></p>
+    <p>Already a user?<a [routerLink]="['']"> Sign In!</a></p>
 </form>
