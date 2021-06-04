@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RequestInterceptor } from './auth/request.interceptor';
 
+// Modules
+import { AlertModule } from '../shared/components/alert/alert.module';
+
+// Components
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -14,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     ],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        AlertModule
     ],
     exports: [ 
         HeaderComponent,
